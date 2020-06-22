@@ -1,0 +1,67 @@
+/* 
+--------------------------------------------------------------------------------
+--- releases.html, pluginscenters.html                                       ---
+--------------------------------------------------------------------------------
+*/
+
+.columns {
+    width: 100%;
+}
+
+.columns td {
+    vertical-align: top;
+}
+
+.divider {
+    width: 15px;
+}
+
+.releases {
+    
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.releases td, table th {
+    border: 1px solid #cccccc;
+}
+.releases tr:first-child th {
+    border-top: 0;
+}
+.releases tr:last-child td {
+    border-bottom: 0;
+}
+.releases tr td:first-child, .releases tr th:first-child {
+    border-left: 0;
+}
+.releases tr td:last-child, .releases tr th:last-child {
+    border-right: 0;
+}
+
+.releases th {
+    width: 50%;
+    padding: 4px;
+    background-color: #dddddd;
+}
+
+.releases td {
+    vertical-align: top;
+    margin: 4px;
+    padding: 4px;
+    padding-left: 10px !important;
+}
+
+.release_name {
+    font-weight: bold;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+    padding-top: 8px;
+}
+
+.release_details {
+    font-size: 13px;
+    margin: 0px;
+    padding: 0px;
+    padding-bottom: 8px;
+}

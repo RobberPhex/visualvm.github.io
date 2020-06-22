@@ -1,0 +1,107 @@
+---
+layout: visualvm_base_layout
+title: Home
+css: /css/index.css
+---
+
+<div class="content_main">
+    
+    <center id="logo_big">
+        <img src="{{ '/images/visualvm_logo_big.png' | prepend: site.baseurl }}" />
+    </center>
+    
+    <center id="visualvm_caption">
+        <h2 class="noborders">All-in-One Java Troubleshooting Tool</h2>
+    </center>
+    
+    <center id="visualvm_description">
+        VisualVM is a visual tool integrating commandline JDK tools and lightweight profiling capabilities.<br/>
+        Designed for both development and production time use.
+    </center>
+    
+    <center>
+        <table>
+            <tr>
+                <td>
+                    <center id="visualvm_download">
+                        <a class="downloadb" href="{{ '/download.html' | prepend: site.baseurl }}">Download 1.4.4</a>
+                    </center>
+
+                    <!--center id="visualvm_other_downloads">
+                        <a href="{{ '/idesupport.html' | prepend: site.baseurl }}">IDE Integrations</a> | 
+                        <a href="{{ '/pluginscenters.html' | prepend: site.baseurl }}">Plugins</a> | 
+                        <a href="{{ '/releases.html' | prepend: site.baseurl }}">Other Releases</a>
+                    </center-->
+                    <center id="visualvm_other_downloads">
+                        <span style="color: gray;">Standalone tool hosted by GitHub</span>
+                    </center>
+                </td>
+                
+                <td width="30px"></td>
+                
+                <td>
+                    <center id="visualvm_download">
+                        <a class="downloadbgraal" href="{{ '/graal.html' | prepend: site.baseurl }}">Graal VisualVM</a>
+                    </center>
+
+                    <center id="visualvm_other_downloads">
+                        <span style="color: gray;">Tool bundled with Oracle GraalVM</span>
+                    </center>
+                </td>
+            <tr>
+        </table>
+    </center>
+    
+    <center id="visualvm_screenshot">
+        <img src="{{ '/images/visualvm_screenshot.png' | prepend: site.baseurl }}" />
+    </center>
+    
+</div>
+
+<div class="content_more">
+    
+    <center>
+        <table id="visualvm_news">
+            <tr>
+                <td class="whiterounded">
+                    <h2>News:</h2>
+                    {% assign count = 1 %}
+                    {% assign allnews = site.pages | reverse %}
+                    {% for news in allnews %}
+                        {% if news.layout == "visualvm_news_layout" %}
+                            <div class="newsline">
+                                <p class="newsline_caption">
+                                    <b><span class="newsdate">{{ news.date | date: '%B %d, %Y' }}: </span>{{ news.title }}</b>
+                                </p>
+                                <p class="newsline_content">
+                                    {{ news.content }}
+                                </p>
+                            </div>
+                            {% assign count = count | plus:1 %}
+                        {% elsif news.layout == "visualvm_release_layout" %}
+                            <div class="newsline">
+                                <p class="newsline_caption">
+                                    <b><span class="newsdate">{{ news.date | date: '%B %d, %Y' }}: </span>{{ news.title }} Released</b>
+                                </p>
+                                <p class="newsline_content">
+                                    {{ news.content }}
+                                </p>
+                            </div>
+                            {% assign count = count | plus:1 %}
+                        {% endif %}
+                        
+                        {% if count > 3 %}
+                            {% break %}
+                        {% endif %}
+                    {% endfor %}
+                </td>
+                <td class="whiterounded">
+                    <h2>Twitter:</h2>
+                    <a class="twitter-timeline" data-chrome="noheader nofooter noborders transparent" data-tweet-limit="3" href="https://twitter.com/visualvm"></a>
+                    <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+                </td>
+            </tr>
+        </table>
+    </center>
+
+</div>

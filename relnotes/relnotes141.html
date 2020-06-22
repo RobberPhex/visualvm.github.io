@@ -1,0 +1,96 @@
+---
+layout: visualvm_base_layout
+title: Release Notes
+---
+
+<div class="content_main">
+    <div class="centered_content">
+        <h1>Release Notes</h1>
+        <p class="description_first description_last2">
+            VisualVM 1.4.1 has been released on April 25th, 2018. This document describes changes introduced by this release.
+        </p>
+
+        <a name="system_requirements"></a>
+        <h2>System Requirements</h2>
+        <div>
+            <h3>Supported OS:</h3>
+            <ul>
+                <li>Microsoft Windows (10, 8, 7, Vista, Server): 32bit &amp; 64bit</li>
+
+                <li>Linux: Intel platform, 32bit &amp; 64bit</li>
+
+                <li>Linux ARM HFLT (Raspberry Pi), JDK 8+ only</li>
+
+                <li>macOS: Intel platform, 64bit</li>
+            </ul>
+
+
+            <h3>Required Software:</h3>
+            <ul>
+                <li>Oracle JDK 8+</li>
+
+                <li>OpenJDK 8+</li>
+            </ul>
+
+        </div>
+        
+        <hr class="textsect">
+
+        <a name="changes"></a>
+        <h2>Changes</h2>
+        <div>
+            <h3>Features and Enhancements:</h3>
+            <ul>
+                <li>Heap Viewer allows to compare heap dumps</li>
+                
+                <li>Load Snapshot dialog uses All Supported Files filter by default</li>
+                
+                <li>Full support for running on JDK 10 and monitoring/profiling Java 10 processes</li>
+            </ul>
+
+            <!--h3>API Changes:</h3>
+            <ul>
+                <li>Compatible: <code>com.sun.tools.visualvm.core.snapshot.Snapshot.computeSnapshotID()</code> added</li>
+            </ul-->
+
+            <h3>Fixed Bugs:</h3>
+            <ul>
+                <li><a href="https://github.com/oracle/visualvm/issues/51">GH-51</a>: StackOverflowError at Startup Profiler</li>
+                
+                <li><a href="https://github.com/oracle/visualvm/issues/52">GH-52</a>: A11Y - Keyboard navigation using Tab does not work</li>
+
+                <li><a href="https://github.com/oracle/visualvm/issues/53">GH-53</a>: Configurable OQL results limit</li>
+
+                <li><a href="https://github.com/oracle/visualvm/issues/54">GH-54</a>: A11Y - Filter & Find actions not accessible using keyboard shortcuts</li>
+                
+                <li><a href="https://github.com/oracle/visualvm/issues/55">GH-55</a>: Make thread view collapsable in heapViewer</li>
+                
+                <li><a href="https://github.com/oracle/visualvm/issues/57">GH-57</a>: Why has the "compare to another heap dump" feature disappeared</li>
+                
+                <li><a href="https://github.com/oracle/visualvm/issues/59">GH-59</a>: Provide All Files file filter in File | Load</li>
+
+                <li><a href="https://github.com/oracle/visualvm/issues/62">GH-62</a>: OQL engine not available</li>
+                
+                <li><a href="https://github.com/oracle/visualvm/issues/73">GH-73</a>: VisualVM 1.4 refuses to launch under JDK 10</li>
+            </ul>
+            
+        </div>
+        
+        <hr class="textsect">
+
+        <a name="known_problems"></a>
+        <h2>Known Problems</h2>
+        <div>
+            <ul>
+                <li><u>NetBeans Issue 245522</u>: Instrumented CPU profiling fails on JDK7u65 with -target >=1.7</li>
+
+                <li><u>Java.net Issue 148</u>: VisualVM hangs when lost remote connection</li>
+
+                <li><u>Java.net Issue 120</u>: JMX application datasource cannot be reused on application restart</li>
+            </ul>
+
+            <p>To view all known problems please see the <a href="https://github.com/oracle/visualvm/issues">VisualVM Issues</a> page.</p>
+        </div>
+            
+    </div>
+</div>

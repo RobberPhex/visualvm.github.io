@@ -1,0 +1,126 @@
+---
+layout: visualvm_base_layout
+title: Download
+css: /css/download.css
+---
+
+<div class="content_main">
+    <div class="centered_content">
+        <h1>Download</h1>
+
+        <p class="description_first">
+            There are two official VisualVM distributions: VisualVM at GitHub and Graal VisualVM bundled with the GraalVM.
+        </p>
+        
+        <p>
+            VisualVM at GitHub is a bleeding-edge tool running on and supporting any Java. Graal VisualVM is a stable tool running on GraalVM and supporting any Java. Learn more about <a href="{{ '/graal.html' | prepend: site.baseurl }}">Graal VisualVM</a>.
+        </p>
+        
+        <p class="description_last">
+            VisualVM has also been distributed in Oracle JDK 6~8 as <a href="https://docs.oracle.com/javase/8/docs/technotes/guides/visualvm/">Java VisualVM</a>. It has been discontinued in Oracle JDK 9.
+        </p>
+
+        <center>
+            <table id="downloads">
+                <tr>
+                    <td class="whiterounded">
+                        <div style="background-image: url('{{ '/images/testlogo.png' | prepend: site.baseurl }}');">
+                            <h3>Binaries:</h3>
+                            <p class="download_main" style="padding-top: 10px;"><a id="link_download_main" href="https://github.com/visualvm/visualvm.src/releases/download/1.4.4/visualvm_144.zip" onclick="ga('send', 'event', 'Download MAIN 1.4.4');"><b>VisualVM 1.4.4</b></a> <span>(.zip, 14.9 MB)</span></p>
+                            <!--p><a id="link_download_ml" href="https://github.com/visualvm/visualvm.src/releases/download/1.4.3/visualvm_143-ml.zip" onclick="ga('send', 'event', 'Download ML 1.4.3');">Multi-language</a> <span>(.zip, xx.x MB, English / 日本語 / 简体中文)</span></p-->
+                            <p style="padding-bottom: 15px;"><a id="link_download_dmg" href="https://github.com/visualvm/visualvm.src/releases/download/1.4.4/VisualVM_144.dmg" onclick="ga('send', 'event', 'Download DMG 1.4.4');">macOS Application Bundle</a> <span>(.dmg, 16.5 MB)</span></p>
+                        </div>
+                    </td>
+
+                    <td>
+                        <div style="padding: 20px; padding-left: 30px; font-size: 13px;">
+                            <h3>Other Downloads:</h3>
+                            <p><a href="{{ '/idesupport.html' | prepend: site.baseurl }}">IDE Integrations</a></p>
+                            <p><a href="{{ '/pluginscenters.html' | prepend: site.baseurl }}">Plugins Offline</a></p>
+                            <p><a href="{{ '/releases.html' | prepend: site.baseurl }}">Previous Releases</a></p>
+                        </div>
+                    </td>
+                </tr>
+
+                <tr>
+
+                    <td colspan="2">
+                        <table id="downloads2">
+                            <tr>
+                                <td class="downloads_systems">
+                                    <h3>Systems:</h3>
+                                    <p>
+                                        Microsoft Windows<br>
+                                        Linux<br>
+                                        macOS<br>
+                                    </p>
+                                </td>
+
+                                <td class="downloads_java">
+                                    <h3>Java:</h3>
+                                    <p>
+                                        Oracle JDK 8+<br>
+                                        OpenJDK 8+<br>
+                                    </p>
+                                </td>
+
+                                <td class="downloads_news">
+                                    <h3>What's New:</h3>
+                                    <p>
+                                        Full support for Java 13<br>
+                                        VisualVM charts improvements<br>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+
+                </tr>
+            </table>
+        </center>
+        
+        <br>
+        
+        <p>See the <a href="{{ '/relnotes.html' | prepend: site.baseurl }}">Release Notes</a> for details on system requirements, new features, API changes and fixed bugs.</p>
+        
+        <p>Follow the <a href="{{ '/gettingstarted.html' | prepend: site.baseurl }}">Getting Started</a> guide to learn how to use VisualVM. To get more details, see 
+        the <a href="{{ '/features.html' | prepend: site.baseurl }}">Features</a> and <a href="{{ '/plugins.html' | prepend: site.baseurl }}">Plugins</a> sections and read the VisualVM <a href="{{ '/documentation.html' | prepend: site.baseurl }}">Documentation</a>.
+        See the <a href="{{ '/troubleshooting.html' | prepend: site.baseurl }}">Troubleshooting Guide</a> if experiencing any problems with starting or using the tool.</p>
+        
+    </div>
+</div>
+
+<div class="content_more">
+    <div class="centered_content">
+        <h3>First Steps</h3>
+        <ol>
+            <li><b>Unzip</b> the downloaded archive. The archive already contains the top-level <code>visualvm</code> directory.</li>
+            <li><b>Start</b> VisualVM by invoking the binary appropriate for your OS:<br><code>visualvm\bin\visualvm.exe</code> or <code>visualvm/bin/visualvm</code><br>
+                You may provide additional options to define JDK and/or VisualVM user directory:<br><code>--jdkhome "&lt;path to JDK&gt;" --userdir "&lt;path to userdir&gt;"</code></li>
+            <li><b>Check out</b> the <a href="{{ '/gettingstarted.html' | prepend: site.baseurl }}">Getting Started</a> document, it's designed to help you start using VisualVM.</li>
+        </ol>
+        
+        <br>
+        
+        <h3>Possible Problems</h3>
+        <ul>
+            <li><b>VisualVM doesn't start:</b> there are several problems which could prevent VisualVM from starting without any obvious reason:
+                <ul>
+                    <li><b>The download is broken</b> - make sure you've got the correct bits (archive managers typically notify you when the archive is broken)</li>
+                    <li><b>VisualVM waits for license confirmation</b> - make sure you haven't overlooked the License Agreement dialog</li>
+                    <li><b>Incorrect JDK is used for running VisualVM</b> - if you haven't defined a JDK to run VisualVM manually, make sure that the default Java on your system is Oracle JDK 8+</li>
+                    <li><b>Incorrectly set JDK for running VisualVM</b> - if you have defined a JDK to run VisualVM manually, make sure the path to the JDK is correct and doesn't end with a slash</li>
+                    <li><b>Incorrectly set VisualVM user directory</b> - if you have defined VisualVM user directory manually, make sure it is outside of VisualVM installation directory</li>
+                </ul>
+            </li>
+            
+            <li><b>VisualVM startup terminates by Error Starting VisualVM Dialog - unsupported version of Java:</b> this typically happens when JRE or incorrect JDK version is used to run VisualVM, make sure VisualVM is running using Oracle JDK 7+</li>
+            
+            <li><b>VisualVM startup terminates by Warning - could not install some modules message:</b> this can happen if you unzip the VisualVM archive over an older VisualVM version, make sure you are unzipping the VisualVM to a new directory</li>
+
+            <li><b>Local Applications Cannot Be Detected dialog is shown after VisualVM startup:</b> this can happen on Windows systems, see the <a href="{{ '/troubleshooting.html#jpswin' | prepend: site.baseurl }}">Troubleshooting Guide</a> for more details and steps to fix the problem</li>
+        </ul>
+        
+        <p><b>Still having problems?</b> See the <a href="{{ '/troubleshooting.html' | prepend: site.baseurl }}">Troubleshooting Guide</a>, let us know using the <a href="{{ '/feedback.html' | prepend: site.baseurl }}">Feedback</a> page or <a href="https://github.com/visualvm/visualvm.src/issues/new">file a bug</a>.</p>
+    </div>
+</div>
